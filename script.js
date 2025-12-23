@@ -46,3 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
   updateAdminStatus();
   setInterval(updateAdminStatus, 1000); // update tiap detik
 });
+
+/* ===== TERMS MODAL ===== */
+const openTerms = document.getElementById("openTerms");
+const closeTerms = document.getElementById("closeTerms");
+const agreeTerms = document.getElementById("agreeTerms");
+const termsModal = document.getElementById("termsModal");
+
+if (openTerms) {
+  openTerms.addEventListener("click", (e) => {
+    e.preventDefault();
+    termsModal.classList.add("active");
+  });
+}
+
+[closeTerms, agreeTerms].forEach((btn) => {
+  if (btn) {
+    btn.addEventListener("click", () => {
+      termsModal.classList.remove("active");
+    });
+  }
+});
