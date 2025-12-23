@@ -150,50 +150,43 @@ footer {
   }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
 
-/* Tablet (iPad) */
-@media (max-width: 1024px) {
-  header {
-    padding: 60px 20px 30px;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero {
-    gap: 24px;
-  }
-
-  .hero-card {
-    padding: 24px;
-  }
-}
-
-/* Mobile */
+/* =====================
+   Responsive Mobile
+   ===================== */
 @media (max-width: 768px) {
   header {
-    padding: 50px 16px 24px;
+    padding: 60px 16px 30px;
   }
 
   header h1 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
 
   header p {
     font-size: 0.95rem;
   }
 
+  .container {
+    padding: 16px;
+  }
+
   .hero {
-    grid-template-columns: 1fr; /* jadi 1 kolom */
+    gap: 20px;
     margin-top: 30px;
   }
 
   .hero-card {
     padding: 22px;
+    border-radius: 14px;
+  }
+
+  .hero-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-card li {
+    font-size: 0.95rem;
   }
 
   .cta {
@@ -203,28 +196,17 @@ footer {
   .cta button {
     width: 100%;
     max-width: 320px;
-    font-size: 1.05rem;
     padding: 16px;
+    font-size: 1.05rem;
   }
 
   footer {
     font-size: 0.8rem;
   }
 
-  /* Floating block lebih kecil di mobile */
+  /* Floating blocks lebih kecil di HP */
   .block {
     width: 28px;
     height: 28px;
-  }
-}
-
-/* HP kecil */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header p {
-    font-size: 0.9rem;
   }
 }
