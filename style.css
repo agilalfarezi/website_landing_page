@@ -169,6 +169,44 @@ footer {
   animation-duration: 20s;
 }
 
+/* Admin Status Announcement */
+.admin-status {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(10, 255, 0, 0.3);
+  backdrop-filter: blur(8px);
+  font-size: 0.95rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.status-dot.online {
+  background: #0aff00;
+  color: #0aff00;
+}
+
+.status-dot.offline {
+  background: #ff3b3b;
+  color: #ff3b3b;
+}
+
+.status-time {
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
 @keyframes float {
   from {
     transform: translateY(100vh) rotate(0deg);
@@ -203,4 +241,113 @@ footer {
   .hero {
     margin-top: -20px; /* bikin hero "naik dikit" */
   }
+}
+
+/* Dot Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.status-dot.online {
+  animation: pulse 2s infinite;
+}
+
+.status-dot.offline {
+  animation: pulse 2s infinite;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: linear-gradient(180deg, #08140c, #050a06);
+  margin-top: 80px;
+  padding: 60px 20px 30px;
+  border-top: 1px solid rgba(10, 255, 0, 0.15);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h4 {
+  color: var(--green);
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.footer-col a {
+  display: block;
+  color: #cfeecf;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: var(--green);
+}
+
+.footer-divider {
+  margin: 40px 0 25px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.65;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-social img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.85;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(89%) saturate(600%)
+    hue-rotate(60deg);
+  transition: 0.25s ease;
+}
+
+.footer-social a:hover img {
+  opacity: 1;
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 8px rgba(10, 255, 0, 0.7));
 }
