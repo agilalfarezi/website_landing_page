@@ -39,6 +39,12 @@ header h1 {
   text-shadow: 0 0 15px rgba(10, 255, 0, 0.6);
 }
 
+header h2 {
+  font-size: 3rem;
+  color: var(--green);
+  text-shadow: 0 0 15px rgba(10, 255, 0, 0.6);
+}
+
 header p {
   margin-top: 12px;
   opacity: 0.9;
