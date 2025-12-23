@@ -28,10 +28,18 @@ body {
   z-index: -1;
 }
 
-header {
+/* FULL SCREEN SECTION */
+header,
+.section {
+  min-height: 100vh;              /* 1 layar penuh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;        /* tengah vertikal */
+  align-items: center;            /* tengah horizontal */
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 40px 20px;
 }
+
 
 header h1 {
   font-size: 3rem;
@@ -152,6 +160,35 @@ footer {
   width: 150px;
   filter: drop-shadow(0 0 15px rgba(10, 255, 0, 0.6));
   cursor: pointer;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.section h2 {
+  color: var(--green);
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(10, 255, 0, 0.4);
+}
+
+.section p {
+  max-width: 800px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.payment-list {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.payment-list li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
 }
 
 @keyframes float {
