@@ -28,7 +28,6 @@ body {
   z-index: -1;
 }
 
-
 header {
   text-align: center;
   padding: 80px 20px 40px;
@@ -148,5 +147,84 @@ footer {
   }
   to {
     transform: translateY(-120px) rotate(360deg);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablet (iPad) */
+@media (max-width: 1024px) {
+  header {
+    padding: 60px 20px 30px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    gap: 24px;
+  }
+
+  .hero-card {
+    padding: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 50px 16px 24px;
+  }
+
+  header h1 {
+    font-size: 2.1rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+    margin-top: 30px;
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+
+  .cta {
+    margin: 40px 0;
+  }
+
+  .cta button {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.05rem;
+    padding: 16px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  /* Floating block lebih kecil di mobile */
+  .block {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
   }
 }
