@@ -1,0 +1,164 @@
+:root {
+  --green: #0aff00;
+  --dark: #0b0f0b;
+  --card: rgba(20, 30, 20, 0.85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a3d1a, #000);
+  color: #eaffea;
+  overflow-x: hidden;
+}
+
+/* Background grid */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(10, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 255, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--green);
+  text-shadow: 0 0 15px rgba(10, 255, 0, 0.6);
+}
+
+header p {
+  margin-top: 12px;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.hero-card {
+  background: var(--card);
+  border: 1px solid rgba(10, 255, 0, 0.3);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(10, 255, 0, 0.15);
+}
+
+.hero-card h2 {
+  color: var(--green);
+  margin-bottom: 15px;
+}
+
+.hero-card ul {
+  list-style: none;
+}
+
+.hero-card li {
+  margin-bottom: 10px;
+}
+
+.hero-card li::before {
+  content: "✔";
+  color: var(--green);
+  margin-right: 8px;
+}
+
+.cta {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.cta button {
+  background: linear-gradient(135deg, #0aff00, #00aa00);
+  border: none;
+  color: #001a00;
+  padding: 18px 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(10, 255, 0, 0.5);
+  transition: 0.2s ease;
+}
+
+.cta button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(10, 255, 0, 0.8);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Roblox floating blocks */
+.block {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--green);
+  opacity: 0.15;
+  animation: float linear infinite;
+}
+
+.b1 {
+  left: 10%;
+  animation-duration: 14s;
+}
+.b2 {
+  left: 30%;
+  animation-duration: 18s;
+}
+.b3 {
+  left: 55%;
+  animation-duration: 16s;
+}
+.b4 {
+  left: 80%;
+  animation-duration: 20s;
+}
+
+.topbar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.logo {
+  width: 150px;
+  filter: drop-shadow(0 0 15px rgba(10, 255, 0, 0.6));
+  cursor: pointer;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(-120px) rotate(360deg);
+  }
+}
